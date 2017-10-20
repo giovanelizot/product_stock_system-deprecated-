@@ -1,42 +1,42 @@
-<!--Classe de Cabeçalho com um conjunto de informações das Páginas do Sistema -->
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Sistema de Controle de Estoque">
-  <meta name="author" content="Giovani, Matheus e Vinicius">
-  <title>System Stock| Dashboard</title>
-  <!-- Largura da Tela com Página que se adequa,responsivo usando Bootstrap -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap-->
-  <link rel="stylesheet" href="assets\bootstrap\bootstrap\css/bootstrap.min.css">
-  <!-- FONTES -->
-    <link rel="stylesheet" href="assets\fonts\font-awesome\css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,200,300,700' rel='stylesheet' type='text/css'>
-  <!-- END FONTES -->
-  <!-- Google Fontes -->
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="assets/lteadmin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/lteadmin/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="assets/lteadmin/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/lteadmin/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="assets/lteadmin/dist/css/skins/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="assets/lteadmin/bower_components/morris.js/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="assets/lteadmin/bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="assets/lteadmin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="assets/lteadmin/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="assets/lteadmin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  <!-- Icones -->
-  <link rel="stylesheet" href="assets\Icones/css/ionicons.min.css">
-  <!-- Estilo do tema -->
-  <link rel="stylesheet" href="assets\css/SystemAdmin.min.css">
-  <link rel="stylesheet" href="assets\css\temas/temas_principal.min.css">
-  <!-- Gráficos -->
-  <link rel="stylesheet" href="assets\js\graficos.js\css/morris.js/morris.css">
-  <!-- Mapa -->
-  <link rel="stylesheet" href="assets\graficos_mapas\css/jquery-jvectormap.css">  
-  <link rel="stylesheet" href="assets\bootstrap\bootstrap-datepicker\css/bootstrap-datepicker.min.css">  
-  <link rel="stylesheet" href="assets\bootstrap\bootstrap-daterangepicker\css/daterangepicker.css">
-  <!-- Bootstrap  Editor de Texto -->
-  <link rel="stylesheet" href="assets\bootstrap\bootstrap-wysihtml5\css/bootstrap3-wysihtml5.min.css">
-
-
-
 </head>
-</html>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
