@@ -524,6 +524,7 @@
     <!-- /.content -->
   </div>
 <?php 
-	include('src/views/layout/footer.php');
 	include('src/views/layout/foot.php');
  ?>	
+ <?php include('src/views/layout/footer.php');
+ ?>
