@@ -37,17 +37,17 @@ include('src/views/layout/header.php');
 
       <?php 
       if (isset($_POST['nome'])) {
-       var_dump($_POST);
-       echo "\n\n";
-       echo $_POST['id'];
-       echo "Testando Envio dos Dados";
-   }
+         var_dump($_POST);
+         echo "\n\n";
+         echo $_POST['id'];
+         echo "Testando Envio dos Dados";
+     }
 
-   ?>
+     ?>
 
 
 
-   <form method="post" action="" >
+     <form method="post" action="" >
       <fieldset>
         <legend><strong> Cadastro de Marcas</strong></legend>
         <label for="nome">Marca</label>
@@ -68,15 +68,15 @@ include('src/views/layout/header.php');
         <br>
         <br>
         <button type="submit" value="Enviar" class="btn btn-info">
-         Enviar
-     </button>  
-     <button type="reset" value="Limpar Dados" class="btn btn-info">
-         Limpar
-     </button>
-     
+           Enviar
+       </button>  
+       <button type="reset" value="Limpar Dados" class="btn btn-info">
+           Limpar
+       </button>
+       
 
-     
- </fieldset>
+       
+   </fieldset>
 </form>
 <!-- /.box-body -->
 <div class="box-footer">
@@ -113,17 +113,17 @@ include('src/views/layout/header.php');
           <div class="col-xs-12">
             <div class="box">
               <div class="box-header">
-               <strong>Editar Marca</strong><br> 
+                 <strong>Editar Marca</strong><br> 
+                 <input type="number" name="id" size="40" maxlength="75" value="">
+                 <button type="submit" value="Enviar" class="btn btn-info">
+                   Editar
+               </button><br><br> 
+               <strong>Deletar Marca</strong><br> 
                <input type="number" name="id" size="40" maxlength="75" value="">
                <button type="submit" value="Enviar" class="btn btn-info">
-                 Editar
-             </button><br><br> 
-             <strong>Deletar Marca</strong><br> 
-             <input type="number" name="id" size="40" maxlength="75" value="">
-             <button type="submit" value="Enviar" class="btn btn-info">
-                 Deletar
-             </button>  
-             <div class="box-tools">
+                   Deletar
+               </button>  
+               <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
                 </div>
             </div>
@@ -133,42 +133,42 @@ include('src/views/layout/header.php');
     <div class="box-body table-responsive no-padding">
         <!-- Cria a tabela com os produtos -->
         <table class="table table-bordered" >
-         <tr>
-          <th>Identificação</th>
-          <th>Marca</th>
-          <th>Data</th>
-          <th>Descrição</th>
-          <th>Observação</th>
-      </tr>
-      <tr>
-          <td>id</td>
-          <td><span class="label label-success">Olimpikus</span></td>
-          <td><span class="label label-success">24/10/2017</span></td>
-          <td>Distribuidora de Equipamentos</td>        
-          <td>Produto destinado para programadores.</td>
-      </tr>
-      <tr>
-         <td>id</td>
-         <td><span class="label label-success">Olimpikus</span></td>
-         <td><span class="label label-success">24/10/2017</span></td>
-         <td>Distribuidora de Equipamentos</td>        
-         <td>Produto destinado para programadores.</td>
-     </tr>
-     <tr>
-         <td>id</td>
-         <td><span class="label label-success">Olimpikus</span></td>
-         <td><span class="label label-success">24/10/2017</span></td>
-         <td>Distribuidora de Equipamentos</td>        
-         <td>Produto destinado para programadores.</td>
-     </tr>
-     <tr>
-         <td>id</td>
-         <td><span class="label label-success">Olimpikus</span></td>
-         <td><span class="label label-success">24/10/2017</span></td>
-         <td>Distribuidora de Equipamentos</td>        
-         <td>Produto destinado para programadores.</td>
-     </tr>
- </table>
+            <tr class="bg-primary">
+              <th>Identificação</th>
+              <th>Marca</th>
+              <th>Data</th>
+              <th>Descrição</th>
+              <th>Observação</th>
+          </tr>
+          <tr>
+              <td>id</td>
+              <td><span class="label label-success">Olimpikus</span></td>
+              <td><span class="label label-success">24/10/2017</span></td>
+              <td>Distribuidora de Equipamentos</td>        
+              <td>Produto destinado para programadores.</td>
+          </tr>
+          <tr>
+           <td>id</td>
+           <td><span class="label label-success">Olimpikus</span></td>
+           <td><span class="label label-success">24/10/2017</span></td>
+           <td>Distribuidora de Equipamentos</td>        
+           <td>Produto destinado para programadores.</td>
+       </tr>
+       <tr>
+           <td>id</td>
+           <td><span class="label label-success">Olimpikus</span></td>
+           <td><span class="label label-success">24/10/2017</span></td>
+           <td>Distribuidora de Equipamentos</td>        
+           <td>Produto destinado para programadores.</td>
+       </tr>
+       <tr>
+           <td>id</td>
+           <td><span class="label label-success">Olimpikus</span></td>
+           <td><span class="label label-success">24/10/2017</span></td>
+           <td>Distribuidora de Equipamentos</td>        
+           <td>Produto destinado para programadores.</td>
+       </tr>
+   </table>
 </div>
 <!-- /.box-body -->
 </div>

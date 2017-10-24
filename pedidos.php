@@ -37,17 +37,17 @@ include('src/views/layout/header.php');
 
       <?php 
       if (isset($_POST['nome'])) {
-         var_dump($_POST);
-         echo "\n\n";
-         echo $_POST['valor_total'];
-         echo "Testando Envio dos Dados";
-     }
+       var_dump($_POST);
+       echo "\n\n";
+       echo $_POST['valor_total'];
+       echo "Testando Envio dos Dados";
+   }
 
-     ?>
+   ?>
 
 
 
-     <form method="post" action="" >
+   <form method="post" action="" >
       <fieldset>
         <legend><strong> Cadastro de Pedidos</strong></legend>
         <label for="id">Identificação</label>
@@ -102,11 +102,11 @@ include('src/views/layout/header.php');
     <br>
     <br>
     <button type="submit" value="Enviar" class="btn btn-info">
-       Enviar
-   </button>  
-   <button type="reset" value="Limpar Dados" class="btn btn-info">
-       Limpar
-   </button>
+     Enviar
+ </button>  
+ <button type="reset" value="Limpar Dados" class="btn btn-info">
+     Limpar
+ </button>
 
 
 
@@ -114,7 +114,7 @@ include('src/views/layout/header.php');
 </form>
 <!-- /.box-body -->
 <div class="box-footer">
-   
+
 </div>  
 <!-- /.box-footer-->
 
@@ -150,78 +150,78 @@ include('src/views/layout/header.php');
                   <strong>Editar Pedido</strong><br> 
                   <input type="text" name="id" size="40" maxlength="75" value="">
                   <button type="submit" value="Enviar" class="btn btn-info">
-                   Editar
-               </button><br><br> 
-               <strong>Deletar Pedido</strong><br> 
-               <input type="text" name="id" size="40" maxlength="75" value="">
-               <button type="submit" value="Enviar" class="btn btn-info">
-                   Deletar
-               </button>  
-               <div class="box-tools">
-                <div class="input-group input-group-sm" style="width: 150px;">
+                     Editar
+                 </button><br><br> 
+                 <strong>Deletar Pedido</strong><br> 
+                 <input type="text" name="id" size="40" maxlength="75" value="">
+                 <button type="submit" value="Enviar" class="btn btn-info">
+                     Deletar
+                 </button>  
+                 <div class="box-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.box-header -->
-    <div class="box-body table-responsive no-padding">
-        <!-- Cria a tabela com os produtos -->
-        <table class="table table-bordered" >
-           <tr class="info">
-              <th>Identificação</th>
-              <th>Data</th>           
-              <th>Data de Finalização</th>
-              <th>Valor Total</th>
-              <th>Situação</th>
-              <th>Empresa</th>
-              <th>Fornecedor</th>
-              <th>Descrição</th>
-          </tr>
-          <tr class="info">
-              <td>id</td>  
-              <td><span>23/10/2017</span></td>
-              <td><span>24/10/2017</span></td>   
-              <td>R$ 2.800,90</td>
-              <td><span class="label label-success">Aprovado</span></td>
-              <td>Vencal</td>
-              <td><span>OLIMPIKUS</span></td>
-              <td>Distribuidora de Calçados</td>
-          </tr>
-          <tr class="info">
-              <td>id</td>  
-              <td><span>23/10/2017</span></td>
-              <td><span>24/10/2017</span></td>   
-              <td>R$ 2.800,90</td>
-              <td><span class="label label-success">Aprovado</span></td>
-              <td>Vencal</td>
-              <td><span>OLIMPIKUS</span></td>
-              <td>Distribuidora de Calçados</td>
-          </tr>
-          <tr class="info">
-           <td>id</td>  
-           <td><span>23/10/2017</span></td>
-           <td><span>24/10/2017</span></td>   
-           <td>R$ 2.800,90</td>
-           <td><span class="label label-success">Aprovado</span></td>
-           <td>Vencal</td>
-           <td><span>OLIMPIKUS</span></td>
-           <td>Distribuidora de Calçados</td>
-       </tr>
-       <tr class="info">
-           <td>id</td>  
-           <td><span>23/10/2017</span></td>
-           <td><span>24/10/2017</span></td>   
-           <td>R$ 2.800,90</td>
-           <td><span class="label label-success">Aprovado</span></td>
-           <td>Vencal</td>
-           <td><span>OLIMPIKUS</span></td>
-           <td>Distribuidora de Calçados</td>
-       </tr>
-   </table>
-</div>
-<!-- /.box-body -->
-</div>
-<!-- /.box -->
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+            <!-- Cria a tabela com os produtos -->
+            <table class="table table-bordered" >
+            <tr class="bg-success">
+                  <th>Identificação</th>
+                  <th>Data</th>           
+                  <th>Data de Finalização</th>
+                  <th>Valor Total</th>
+                  <th>Situação</th>
+                  <th>Empresa</th>
+                  <th>Fornecedor</th>
+                  <th>Descrição</th>
+              </tr>
+              <tr class="info">
+                  <td>id</td>  
+                  <td><span>23/10/2017</span></td>
+                  <td><span>24/10/2017</span></td>   
+                  <td>R$ 2.800,90</td>
+                  <td><span class="label label-success">Aprovado</span></td>
+                  <td>Vencal</td>
+                  <td><span>OLIMPIKUS</span></td>
+                  <td>Distribuidora de Calçados</td>
+              </tr>
+              <tr class="info">
+                  <td>id</td>  
+                  <td><span>23/10/2017</span></td>
+                  <td><span>24/10/2017</span></td>   
+                  <td>R$ 2.800,90</td>
+                  <td><span class="label label-success">Aprovado</span></td>
+                  <td>Vencal</td>
+                  <td><span>OLIMPIKUS</span></td>
+                  <td>Distribuidora de Calçados</td>
+              </tr>
+              <tr class="info">
+                 <td>id</td>  
+                 <td><span>23/10/2017</span></td>
+                 <td><span>24/10/2017</span></td>   
+                 <td>R$ 2.800,90</td>
+                 <td><span class="label label-success">Aprovado</span></td>
+                 <td>Vencal</td>
+                 <td><span>OLIMPIKUS</span></td>
+                 <td>Distribuidora de Calçados</td>
+             </tr>
+             <tr class="info">
+                 <td>id</td>  
+                 <td><span>23/10/2017</span></td>
+                 <td><span>24/10/2017</span></td>   
+                 <td>R$ 2.800,90</td>
+                 <td><span class="label label-success">Aprovado</span></td>
+                 <td>Vencal</td>
+                 <td><span>OLIMPIKUS</span></td>
+                 <td>Distribuidora de Calçados</td>
+             </tr>
+         </table>
+     </div>
+     <!-- /.box-body -->
+ </div>
+ <!-- /.box -->
 </div>
 </div>
 </section>
