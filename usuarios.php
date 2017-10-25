@@ -12,7 +12,7 @@ include('src/views/layout/header.php');
       <small>Control panel</small>
   </h1>
   <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Dashboard</li>
   </ol>
 </section>
@@ -121,7 +121,7 @@ include('src/views/layout/header.php');
                    </button><br><br> 
                    <strong>Deletar Usuário</strong><br> 
                    <input type="number" name="id" size="40" maxlength="75" value="">
-                   <button type="submit" value="Enviar" class="btn btn-info">
+                   <button type="submit" value="Enviar" class="btn btn-danger">
                        Deletar
                    </button>  
                    <div class="box-tools">
@@ -134,16 +134,11 @@ include('src/views/layout/header.php');
         <div class="box-body table-responsive no-padding">
             <!-- Cria a tabela com os produtos -->
             <table class="table table-bordered" >
-            <tr class="bg-primary">
+                <tr class="bg-primary">
                   <th>Nome</th>
                   <th>E-mail</th>
                   <th>Ativo</th>
               </tr>
-               <tr class="info">
-                  <td>Usuário</td>
-                  <td><span>usuario@usuario.com</span></td>
-                  <td><span>Sim</span></td>
-              </tr>
               <tr class="info">
                   <td>Usuário</td>
                   <td><span>usuario@usuario.com</span></td>
@@ -154,7 +149,12 @@ include('src/views/layout/header.php');
                   <td><span>usuario@usuario.com</span></td>
                   <td><span>Sim</span></td>
               </tr>
-               <tr class="info">
+              <tr class="info">
+                  <td>Usuário</td>
+                  <td><span>usuario@usuario.com</span></td>
+                  <td><span>Sim</span></td>
+              </tr>
+              <tr class="info">
                   <td>Usuário</td>
                   <td><span>usuario@usuario.com</span></td>
                   <td><span>Sim</span></td>

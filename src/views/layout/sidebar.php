@@ -16,7 +16,7 @@
   <ul class="sidebar-menu" data-widget="tree">
     <li class="header"> MAIN NAVIGATION </li>
     <li>
-      <a href="usuarios.php">
+      <a href="unidades.php">
        <i class="fa fa-university"></i> <span> Administração </span>
        <span class="pull-right-container">    
        </span>
@@ -50,7 +50,7 @@
 </a>
 </li>
 <li>
-  <a href="usuarios.php">
+  <a href="vendas.php">
     <i class="fa fa-usd"></i><span>Gerenciar Vendas</span>
     <span class="pull-right-container">    
     </span>
@@ -59,6 +59,13 @@
 <li>
 <a href="fornecedores.php">
     <i class="fa fa-truck"></i> <span>Gerenciar Fornecedores</span>
+    <span class="pull-right-container">    
+    </span>
+</a>
+</li> 
+<li>
+<a href="relatorios.php">
+    <i class="fa fa-truck"></i> <span>Relatórios</span>
     <span class="pull-right-container">    
     </span>
 </a>

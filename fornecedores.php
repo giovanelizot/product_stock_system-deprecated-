@@ -12,7 +12,7 @@ include('src/views/layout/header.php');
       <small>Control panel</small>
   </h1>
   <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Dashboard</li>
   </ol>
 </section>
@@ -36,14 +36,14 @@ include('src/views/layout/header.php');
     <div class="box-body">
       <?php 
       if (isset($_POST['nome'])) {
-         var_dump($_POST);
-         echo "\n\n";
-         echo $_POST['preco'];
-         echo "Testando Envio dos Dados";
-     }
+       var_dump($_POST);
+       echo "\n\n";
+       echo $_POST['cidade'];
+       echo "Testando Envio dos Dados";
+   }
 
-     ?>
-     <form method="post" action="" >
+   ?>
+   <form method="post" action="" >
       <fieldset>
         <legend><strong> Cadastro de Fornecedores</strong></legend>
         <label for="nome">Nome</label>
@@ -114,12 +114,12 @@ include('src/views/layout/header.php');
         <br>
         <br>
         <button type="submit" value="Enviar" class="btn btn-info">
-           Enviar
-       </button>  
-       <button type="reset" value="Limpar Dados" class="btn btn-info">
-           Limpar
-       </button>      
-   </fieldset>
+         Enviar
+     </button>  
+     <button type="reset" value="Limpar Dados" class="btn btn-info">
+         Limpar
+     </button>      
+ </fieldset>
 </form>
 <!-- /.box-body -->
 <div class="box-footer">
@@ -156,17 +156,17 @@ include('src/views/layout/header.php');
           <div class="col-xs-12">
             <div class="box">
               <div class="box-header">
-                 <strong>Editar Fornecedor</strong><br> 
-                 <input type="text" name="id" size="40" maxlength="75" value="">
-                 <button type="submit" value="Enviar" class="btn btn-info">
-                   Editar
-               </button><br><br> 
-               <strong>Deletar Fornecedor</strong><br> 
+               <strong>Editar Fornecedor</strong><br> 
                <input type="text" name="id" size="40" maxlength="75" value="">
                <button type="submit" value="Enviar" class="btn btn-info">
-                   Deletar
-               </button>  
-               <div class="box-tools">
+                 Editar
+             </button><br><br> 
+             <strong>Deletar Fornecedor</strong><br> 
+             <input type="text" name="id" size="40" maxlength="75" value="">
+             <button type="submit" value="Enviar" class="btn btn-danger">
+                 Deletar
+             </button>  
+             <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
                 </div>
             </div>
@@ -209,14 +209,14 @@ include('src/views/layout/header.php');
             <td>Rua do Comércio 99,Ijuí RS</td>
         </tr>
         <tr class="info">
-           <td>Usuario</td>
-           <td><span>Ijuí</span></td>
-           <td>Rio Grande do Sul-RS</td>
-           <td>usuario@usuario.com</td>
-           <td>(55)99113-4959</td>
-           <td>Rua do Comércio 99,Ijuí RS</td>
-       </tr>
-   </table>
+         <td>Usuario</td>
+         <td><span>Ijuí</span></td>
+         <td>Rio Grande do Sul-RS</td>
+         <td>usuario@usuario.com</td>
+         <td>(55)99113-4959</td>
+         <td>Rua do Comércio 99,Ijuí RS</td>
+     </tr>
+ </table>
 </div>
 <!-- /.box-body -->
 </div>

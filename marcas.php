@@ -12,7 +12,7 @@ include('src/views/layout/header.php');
       <small>Control panel</small>
   </h1>
   <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+  <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Dashboard</li>
   </ol>
 </section>
@@ -73,14 +73,14 @@ include('src/views/layout/header.php');
        <button type="reset" value="Limpar Dados" class="btn btn-info">
            Limpar
        </button>
-       
 
-       
+
+
    </fieldset>
 </form>
 <!-- /.box-body -->
 <div class="box-footer">
-  
+
 </div>  
 <!-- /.box-footer-->
 
@@ -120,7 +120,7 @@ include('src/views/layout/header.php');
                </button><br><br> 
                <strong>Deletar Marca</strong><br> 
                <input type="number" name="id" size="40" maxlength="75" value="">
-               <button type="submit" value="Enviar" class="btn btn-info">
+               <button type="submit" value="Enviar" class="btn btn-danger">
                    Deletar
                </button>  
                <div class="box-tools">

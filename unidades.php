@@ -12,7 +12,7 @@ include('src/views/layout/header.php');
       <small>Control panel</small>
   </h1>
   <ol class="breadcrumb">
-      <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+  <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Dashboard</li>
   </ol>
 </section>
@@ -23,7 +23,7 @@ include('src/views/layout/header.php');
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Empresas</h3>
+        <h3 class="box-title">Unidades</h3>
 
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -34,30 +34,30 @@ include('src/views/layout/header.php');
         </div>
     </div>
     <div class="box-body">
+
       <?php 
       if (isset($_POST['nome'])) {
        var_dump($_POST);
        echo "\n\n";
-       echo $_POST['telefone'];
+       echo $_POST['email'];
        echo "Testando Envio dos Dados";
    }
 
    ?>
+
+
+
    <form method="post" action="" >
       <fieldset>
-        <legend><strong> Cadastro de Empresa</strong></legend>
+        <legend><strong> Cadastro Unidades</strong></legend>
         <label for="nome">Nome</label>
         <br>
         <input type="text" name="nome" size="40" maxlength="75" value="">
         <br>
+        <label for="E-mail">E-mail</label>
         <br>
-        <!--
-        <label for="id">Identificação</label>
+        <input type="text" name="email" size="40" maxlength="75" value="">
         <br>
-        <input type="number" name="id" step="1" size="40" maxlength="75" value="">
-        <br>
-        <br>
-        <-->
         <i class="fa fa-phone"></i>
         <label for="telefone">Telefone:</label>
         <br>   
@@ -69,13 +69,31 @@ include('src/views/layout/header.php');
         <input type="text" name="endereco" size="40" maxlength="75" value="">
         <br>
         <br>
-        <button type="submit" value="Enviar" class="btn btn-info">
-         Enviar
-     </button>  
-     <button type="reset" value="Limpar Dados" class="btn btn-info">
-         Limpar
-     </button>      
- </fieldset>
+        <label for="Cidade">Cidade</label>
+        <br>
+        <input type="text" name="cidade" size="40" maxlength="75" value="">
+        <br>
+        <br>
+        <!-- select -->
+        <div class="form-group">
+          <label for="situcao">Ativa</label>
+          <br>
+          <select >
+            <option>Sim</option>
+            <option>Não</option>
+        </select>
+    </div>
+    <br>
+    <button type="submit" value="Enviar" class="btn btn-info">
+     Enviar
+ </button>  
+ <button type="reset" value="Limpar Dados" class="btn btn-info">
+     Limpar
+ </button>
+
+
+
+</fieldset>
 </form>
 <!-- /.box-body -->
 <div class="box-footer">
@@ -93,7 +111,7 @@ include('src/views/layout/header.php');
       <div class="col-md-15">
         <div class="box box-info">
           <div class="box-header with-border">
-            <h3 class="box-title">Lista de Empresas
+            <h3 class="box-title">Listar Unidades
             </h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
@@ -112,13 +130,13 @@ include('src/views/layout/header.php');
           <div class="col-xs-12">
             <div class="box">
               <div class="box-header">
-               <strong>Editar Empresa</strong><br> 
-               <input type="text" name="id" size="40" maxlength="75" value="">
+               <strong>Editar Unidade</strong><br> 
+               <input type="number" name="id" size="40" maxlength="75" value="">
                <button type="submit" value="Enviar" class="btn btn-info">
                  Editar
              </button><br><br> 
-             <strong>Deletar Empresa</strong><br> 
-             <input type="text" name="id" size="40" maxlength="75" value="">
+             <strong>Deletar Unidade</strong><br> 
+             <input type="number" name="id" size="40" maxlength="75" value="">
              <button type="submit" value="Enviar" class="btn btn-danger">
                  Deletar
              </button>  
@@ -132,37 +150,47 @@ include('src/views/layout/header.php');
     <div class="box-body table-responsive no-padding">
         <!-- Cria a tabela com os produtos -->
         <table class="table table-bordered" >
-         <tr class="info">
-          <th>Identificação</th>
-          <th>Empresa</th>
-          <th>Telefone</th>
-          <th>Endereço</th>
-      </tr>
-      <tr class="info">
-          <td>id</td>
-          <td><span class="label label-success">DELL</span></td>
-          <td>(55)99113-4959</td>
-          <td>Rua do Comércio 99,Ijuí RS</td>
-      </tr>
-      <tr class="info">
-         <td>id</td>
-         <td><span class="label label-success">DELL</span></td>
+          <tr class="bg-primary">
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ativo</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>Cidade</th>
+        </tr>
+        <tr class="info">
+            <td>Usuário</td>
+            <td><span>usuario@usuario.com</span></td>
+            <td><span>Sim</span></td>
+            <td>(55)99113-4959</td>
+            <td>Rua do Comércio nª999</td>
+            <td>Ijuí</td>
+        </tr>
+        <tr class="info">
+         <td>Usuário</td>
+         <td><span>usuario@usuario.com</span></td>
+         <td><span>Sim</span></td>
          <td>(55)99113-4959</td>
-         <td>Rua do Comércio 99,Ijuí RS</td>
+         <td>Rua do Comércio nª999</td>
+         <td>Ijuí</td>
      </tr>
      <tr class="info">
-         <td>id</td>
-         <td><span class="label label-success">DELL</span></td>
-         <td>(55)99113-4959</td>
-         <td>Rua do Comércio 99,Ijuí RS</td>
-     </tr>
-     <tr class="info">
-         <td>id</td>
-         <td><span class="label label-success">DELL</span></td>
-         <td>(55)99113-4959</td>
-         <td>Rua do Comércio 99,Ijuí RS</td>
-     </tr>
- </table>
+        <td>Usuário</td>
+        <td><span>usuario@usuario.com</span></td>
+        <td><span>Sim</span></td>
+        <td>(55)99113-4959</td>
+        <td>Rua do Comércio nª999</td>
+        <td>Ijuí</td>
+    </tr>
+    <tr class="info">
+     <td>Usuário</td>
+     <td><span>usuario@usuario.com</span></td>
+     <td><span>Sim</span></td>
+     <td>(55)99113-4959</td>
+     <td>Rua do Comércio nª999</td>
+     <td>Ijuí</td>
+ </tr>
+</table>
 </div>
 <!-- /.box-body -->
 </div>
