@@ -39,7 +39,7 @@ include('src/views/layout/header.php');
       if (isset($_POST['nome'])) {
          var_dump($_POST);
          echo "\n\n";
-         echo $_POST['id'];
+         echo $_POST['nome'];
          echo "Testando Envio dos Dados";
      }
 
@@ -54,15 +54,17 @@ include('src/views/layout/header.php');
         <br>
         <input type="text" name="nome" size="40" maxlength="75" value="">
         <br>
+        <!--
         <label for="id">Identificação</label>
         <br>
         <input type="number" name="id" size="40" maxlength="75" value="">
         <br>
-        <label for="marca">Descrição</label>
+        <-->
+        <label for="descricao">Descrição</label>
         <br>
         <textarea name="descricao"></textarea>
         <br>
-        <label for="marca">Observação</label>
+        <label for="observacao">Observação</label>
         <br>
         <input  type="text" name="observacao" size="40" maxlength="75" value="">
         <br>

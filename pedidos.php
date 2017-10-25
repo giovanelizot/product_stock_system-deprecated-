@@ -44,7 +44,7 @@ include('src/views/layout/header.php');
    }
 
    ?>
-   <form method="post" action="" >
+   <form  method="post" action="" >
       <fieldset>
         <legend><strong> Cadastro de Pedidos</strong></legend>
         <!--
@@ -74,13 +74,13 @@ include('src/views/layout/header.php');
     <label for="Data">Data</label>
     <br>
     <i class="fa fa-calendar"></i>
-    <input type="Data" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+    <input type="Data" size="40" maxlength="75" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
     <br>
     <br>
     <label for="Data">Data de Finalização</label>
     <br>
     <i class="fa fa-calendar"></i>
-    <input type="Data" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+    <input type="Data" size="40" maxlength="75" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
     <br>
     <br>
     <label for="marca">Empresa</label>

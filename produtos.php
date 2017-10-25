@@ -68,7 +68,7 @@ include('src/views/layout/header.php');
           <br>
           <input type="text" name="empresa" size="40" maxlength="75" value="">
           <br>
-          <label for="marca">Descrição</label>
+          <label for="marca" >Descrição</label>
           <br>
           <textarea name="descricao"></textarea>
           <br>

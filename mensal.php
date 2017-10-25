@@ -24,7 +24,9 @@ include('src/views/layout/header.php');
     <div class="box">
       <div class="box-header with-border">
         <h3 class="box-title">Relatórios</h3>
-
+        <br>
+        <p style=" margin: 8px;" align="length"><input align="center" type="button" value="Voltar"  class="btn btn-primary"onClick="JavaScript: window.history.back();">
+        </form>
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
           title="Collapse">
@@ -45,66 +47,66 @@ include('src/views/layout/header.php');
 
    ?>
    <section class="content">
-    <div class="row">
-      <div class="col-md-15">
-        <div class="box box-info">
-          <div class="box-header with-border">
-            <h3 class="box-title">Relatórios Mensal
-            </h3>
-           <div class="panel-body">
-        <a href="mensal.php" class="btn btn-primary">Novo</a>
-        </div>
-      </div>
-      <!-- /.box-header -->
-        <!-- /.box-header -->
-         <div class="box-body table-responsive no-padding">
-          <div class="panel-heading">
-        </div>
-        <div class="col-md-10" id="content">
-        <!-- Produtos -->
-        <div class="row box-dash">
-          <table id="list-products" class="table table-stripped table-bordered">
-            <thead>
-              <tr class="btn-info" >
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Fornecedor</th>
-                <th width="10%">Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-          <tr class="info">
-            <td>1</td>
-            <td>Farinha de milho</td>
-            <td>R$100</td>
-            <td>100</td>
-            <td>Farinhas do nordeste</td>
-            <td>
-              <a href="#" class="btn btn-block btn-success">Entrada</a>
-              <a href="#" class="btn btn-block btn-primary">Editar</a>
-              <a href="#" class="btn btn-block btn-danger">Deletar</a>
-          </td>
-      </tr>
-  </tbody>
-</table>
-</div><!-- Produtos -->
-    </div>
-    <!-- Content -->
-<!-- /.box-body -->
-<div class="box-footer">
+      <div class="row">
+        <div class="col-md-15">
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Relatórios Mensal
+              </h3>
+              <div class="panel-body">
+                  <br>
+                  <p style=" margin: -18px;" align="length"><a href="mensal.php" class="btn btn-primary">Novo</a>
+                  </div>
+              </div>
+              <!-- /.box-header -->
+              <!-- /.box-header -->
+              <div class="box-body table-responsive no-padding">
+                  <div class="panel-heading">
+                  </div>
+                  <div class="col-md-10" id="content">
+                    <!-- Produtos -->
+                    <div class="row box-dash">
+                       <p style="margin: 8px;" align="center"> <table id="list-products" class="table table-stripped table-bordered">
+                        <thead>
+                          <tr class="btn-info" >
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Fornecedor</th>
+                            <th width="10%">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="info">
+                        <td>1</td>
+                        <td>Farinha de milho</td>
+                        <td>R$100</td>
+                        <td>100</td>
+                        <td>Farinhas do nordeste</td>
+                        <td>
+                          <a href="#" class="btn btn-block btn-success">Entrada</a>
+                          <a href="#" class="btn btn-block btn-primary">Editar</a>
+                          <a href="#" class="btn btn-block btn-danger">Deletar</a>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div><!-- Produtos -->
+  </div>
+  <!-- Content -->
+  <!-- /.box-body -->
+  <div class="box-footer">
 
-</div>  
-<!-- /.box-footer-->
-
+  </div>  
+  <!-- /.box-footer-->
 </div>
 <!-- /.box -->
 
 </div>
 <!-- Main content -->
 
-         
+
 
 </div>
 <!-- /.box-body -->

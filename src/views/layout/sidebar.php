@@ -65,7 +65,7 @@
 </li> 
 <li>
 <a href="relatorios.php">
-    <i class="fa fa-truck"></i> <span>Relatórios</span>
+    <i class="fa fa-line-chart" aria-hidden="true"></i> <span>Relatórios</span>
     <span class="pull-right-container">    
     </span>
 </a>
