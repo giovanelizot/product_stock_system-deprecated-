@@ -218,48 +218,7 @@ include('src/views/layout/header.php');
              </tr>
          </table>
 
-         <div class="box-body table-responsive no-padding">
-          <div class="panel-heading">
-            <h3 class="btn-success"> Relatórios</h3>
-        </div>
-        <div class="panel-body">
-            <a href="#" class="btn btn-success">Semanal</a>
-            <a href="#" class="btn btn-success">Mensal</a>
-            <a href="#" class="btn btn-success">Anual</a>
-        </div>
-    </div>
-    <!-- Content -->
-    <div class="col-md-10" id="content">
-        <!-- Produtos -->
-        <div class="row box-dash">
-          <h3>Relatórios</h3>
-          <table id="list-products" class="table table-stripped table-bordered">
-            <thead>
-              <tr class="btn-info" >
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Fornecedor</th>
-                <th width="10%">Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-          <tr class="info">
-            <td>1</td>
-            <td>Farinha de milho</td>
-            <td>R$100</td>
-            <td>100</td>
-            <td>Farinhas do nordeste</td>
-            <td>
-              <a href="#" class="btn btn-block btn-success">Entrada</a>
-              <a href="#" class="btn btn-block btn-primary">Editar</a>
-              <a href="#" class="btn btn-block btn-danger">Deletar</a>
-          </td>
-      </tr>
-  </tbody>
-</table>
-</div><!-- Produtos -->
+         
 
 </div>
 <!-- /.box-body -->

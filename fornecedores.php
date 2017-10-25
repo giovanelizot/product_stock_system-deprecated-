@@ -105,7 +105,7 @@ include('src/views/layout/header.php');
         <i class="fa fa-phone"></i>
         <label for="telefone">Telefone:</label>
         <br>   
-        <input  type="Telefone" name="telefone" data-inputmask='"mask": "(99) 9999-9999"' data-mask>
+        <input  type="Telefone" name="telefone" size="40" maxlength="75" data-inputmask='"mask": "(99) 9999-9999"' data-mask>
         <br>
         <br>
         <label for="marca">Endereço</label>
