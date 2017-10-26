@@ -1,11 +1,13 @@
 <?php
-	$dbname="db_teste";
-	$host="localhost";
-	$usuario="root";
-	$senha="";
+	require 'environment.php';
+
+	$dbname= $datbase;
+	$host = $host_db;
+	$usuario = $user_db;
+	$senha = $pass_db;
 
 	error_reporting(E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
-	
+
 	if(!($id_conexao = mysqli_connect($host,$usuario,$senha)))
 	{
 		echo "Não foi possível estabelecer uma conexão com o gerenciador MySQL.";
@@ -17,6 +19,5 @@
 		echo "Não foi possível conectar ao banco de dados.";
 		exit;
 	}
-	
+
 	mysqli_query($id_conexao, "SET NAMES 'utf8'");
-?>
