@@ -2,6 +2,6 @@
 
 	class DashboardController {
 		public function index() {
-			$title = '';
+
 		}
 	}

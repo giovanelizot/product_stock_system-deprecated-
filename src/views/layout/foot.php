@@ -1,6 +1,5 @@
 </div>
 <!-- ./wrapper -->
-
 <!-- jQuery 3 -->
 <script src="../../../assets/lteadmin/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -35,5 +34,12 @@
 <script src="../../../assets/lteadmin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../../assets/lteadmin/dist/js/demo.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#table').DataTable();
+} );
+</script>
 </body>
 </html>
