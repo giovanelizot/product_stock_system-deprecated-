@@ -1,5 +1,5 @@
 <?php
-$host_db = '';
-$user_db = '';
-$pass_db = '';
-$database = '';
+$host_db = 'localhost';
+$user_db = 'root';
+$pass_db = 'toor';
+$database = 'cliente_ce';
