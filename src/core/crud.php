@@ -1,6 +1,7 @@
 <?php
 
-include('connection.php');
+require 'connection.php';
+
 
 function insertValues(array $datas){
 	$query = "INSERT INTO "
@@ -25,7 +26,7 @@ function insertValues(array $datas){
 				}else{
 					$query .= $value2 . " )";
 				}
-				
+
 			}
 		}
 	}
@@ -55,10 +56,10 @@ function selectValues(array $datas){
 					$query .= $value2 ." ";
 				}
 			}
-			
+
 		}
 
-		
+
 		if($key == "where"){
 			$query .= "WHERE ";
 			foreach ($value as $key2 => $value2) {
@@ -67,7 +68,7 @@ function selectValues(array $datas){
 				}else{
 					$query .= $value2. " ";
 				}
-				
+
 			}
 		}
 		if($key == "groupby"){
@@ -78,7 +79,7 @@ function selectValues(array $datas){
 				}else{
 					$query .= $value2. " ";
 				}
-				
+
 			}
 		}
 	}
@@ -96,7 +97,7 @@ function update(array $datas){
 					$query .= $value2 ." ";
 				}
 			}
-			
+
 		}
 
 		if($key == "set"){
@@ -109,7 +110,7 @@ function update(array $datas){
 				}
 			}
 		}
-		
+
 		if($key == "where"){
 			$query .= "WHERE ";
 			foreach ($value as $key2 => $value2) {
@@ -118,7 +119,7 @@ function update(array $datas){
 				}else{
 					$query .= $value2. " ";
 				}
-				
+
 			}
 		}
 	}
@@ -136,7 +137,7 @@ function delete(array $datas){
 					$query .= $value2 ." ";
 				}
 			}
-			
+
 		}
 
 		if($key == "where"){
@@ -147,7 +148,7 @@ function delete(array $datas){
 				}else{
 					$query .= $value2. " ";
 				}
-				
+
 			}
 		}
 	}
