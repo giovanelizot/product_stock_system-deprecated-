@@ -1,6 +1,6 @@
 <?php 
-include('src/views/layout/head.php');
-include('src/views/layout/header.php');
+include('../layout/head.php');
+include('../layout/header.php');
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -12,7 +12,7 @@ include('src/views/layout/header.php');
       <small>Control panel</small>
   </h1>
   <ol class="breadcrumb">
-      <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="../../../index.php"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Dashboard</li>
   </ol>
 </section>
@@ -24,49 +24,47 @@ include('src/views/layout/header.php');
     <div class="box">
       <div class="box-header with-border">
         <h3 class="box-title">Relatórios</h3>
-        <br>
         <p style=" margin: 8px;" align="length"><input align="center" type="button" value="Voltar"  class="btn btn-primary"onClick="JavaScript: window.history.back();">
-        </form>
-        <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-          title="Collapse">
-          <i class="fa fa-minus"></i></button>
-          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-            <i class="fa fa-times"></i></button>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+              title="Collapse">
+              <i class="fa fa-minus"></i></button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                <i class="fa fa-times"></i></button>
+            </div>
         </div>
-    </div>
-    <div class="box-body">
+        <div class="box-body">
 
-      <?php 
-      if (isset($_POST['valor_total'])) {
-       var_dump($_POST);
-       echo "\n\n";
-       echo $_POST['valor_total'];
-       echo "Testando Envio dos Dados";
-   }
+          <?php 
+          if (isset($_POST['valor_total'])) {
+           var_dump($_POST);
+           echo "\n\n";
+           echo $_POST['valor_total'];
+           echo "Testando Envio dos Dados";
+       }
 
-   ?>
-   <section class="content">
-      <div class="row">
-        <div class="col-md-15">
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Relatórios Mensal
-              </h3>
-              <div class="panel-body">
-                  <br>
-                  <p style=" margin: -18px;" align="length"><a href="mensal.php" class="btn btn-primary">Novo</a>
-                  </div>
-              </div>
-              <!-- /.box-header -->
-              <!-- /.box-header -->
-              <div class="box-body table-responsive no-padding">
+       ?>
+       <section class="content">
+        <div class="row">
+          <div class="col-md-15">
+            <div class="box box-info">
+              <div class="box-header with-border">
+                <h3 class="box-title">Relatórios Semanal
+                </h3>
+                <div class="panel-body">
+                    <br>
+                    <p style=" margin: -18px;" align="length"><a href="semanal.php" class="btn btn-primary">Novo</a>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
                   <div class="panel-heading">
                   </div>
                   <div class="col-md-10" id="content">
                     <!-- Produtos -->
                     <div class="row box-dash">
-                       <p style="margin: 8px;" align="center"> <table id="list-products" class="table table-stripped table-bordered">
+                      <table id="list-products" class="table table-stripped table-bordered">
                         <thead>
                           <tr class="btn-info" >
                             <th>ID</th>
@@ -100,6 +98,7 @@ include('src/views/layout/header.php');
 
   </div>  
   <!-- /.box-footer-->
+
 </div>
 <!-- /.box -->
 
@@ -127,6 +126,6 @@ include('src/views/layout/header.php');
 <!-- /.content-wrapper -->
 
 <?php 
-include('src/views/layout/footer.php');
-include('src/views/layout/foot.php');
+include('../layout/footer.php');
+include('../layout/foot.php');
 ?> 

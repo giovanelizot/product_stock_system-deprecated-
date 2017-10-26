@@ -1,6 +1,6 @@
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.php" class="logo">
+    <a href="../../../index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -29,7 +29,7 @@
                   <li><!-- iniciar a mensagem -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="assets/lteadmin/dist/img/avatar5.png" class="img-circle" alt="User Image">
+                        <img src="../../../assets/lteadmin/dist/img/avatar5.png" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Equipe de Suporte
@@ -43,7 +43,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="assets/lteadmin/dist/img/equipe_financeiro.png" class="img-circle" alt="User Image">
+                        <img src="../../../assets/lteadmin/dist/img/equipe_financeiro.png" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                        Equipe do Financeiro
@@ -55,7 +55,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="assets/lteadmin/dist/img/suporte.png" class="img-circle" alt="User Image">
+                        <img src="../../../assets/lteadmin/dist/img/suporte.png" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Desenvolvedores
@@ -67,7 +67,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="assets/lteadmin/dist/img/avatar.png" class="img-circle" alt="User Image">
+                        <img src="../../../assets/lteadmin/dist/img/avatar.png" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                       Departamento Vendas
@@ -79,7 +79,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="assets/lteadmin/dist/img/avatar3.png" class="img-circle" alt="User Image">
+                        <img src="../../../assets/lteadmin/dist/img/avatar3.png" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Ana Claudia
@@ -215,13 +215,13 @@
           <!-- Conta de Usuario -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="assets/lteadmin/dist/img/admin.png" class="user-image" alt="User Image">
+              <img src="../../../assets/lteadmin/dist/img/admin.png" class="user-image" alt="User Image">
               <span class="hidden-xs">Administrador</span>
             </a>
             <ul class="dropdown-menu">
               <!-- Imagem Administrador -->
               <li class="user-header">
-                <img src="assets/lteadmin/dist/img/admin.png" class="img-circle" alt="User Image">
+                <img src="../../../assets/lteadmin/dist/img/admin.png" class="img-circle" alt="User Image">
 
                 <p>
                   Administrador
