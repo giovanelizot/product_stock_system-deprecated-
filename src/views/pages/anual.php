@@ -1,6 +1,6 @@
 <?php 
-include('src/views/layout/head.php');
-include('src/views/layout/header.php');
+include_once('../layout/head.php');
+include_once('../layout/header.php');
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -12,7 +12,7 @@ include('src/views/layout/header.php');
       <small>Control panel</small>
   </h1>
   <ol class="breadcrumb">
-      <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="../../../index.php"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Dashboard</li>
   </ol>
 </section>
@@ -125,8 +125,8 @@ include('src/views/layout/header.php');
 
 </div>
 <!-- /.content-wrapper -->
-
 <?php 
-include('src/views/layout/footer.php');
-include('src/views/layout/foot.php');
+include_once('../layout/footer.php');
+include_once('../layout/foot.php');
 ?> 
+
