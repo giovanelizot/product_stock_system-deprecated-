@@ -72,7 +72,8 @@ function selectValues($datas){
 		}
 	}
 	$query .= ";";
-	executeQuery($query);
+	echo $query;
+	executeSelect($query);
 }
 
 function updateValues($datas){
