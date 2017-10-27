@@ -1,6 +1,25 @@
 <?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+	error_reporting(E_ALL);
+
 	include('../layout/head.php');
 	include('../layout/header.php');
+
+	require('../../controllers/ProdutosController.php');
+	$produtos = new ProdutosController;
+	if(count($_POST) > 0) {
+		if (isset($_GET['id'])) {
+			$produtos_list = $produtos->update($_GET['id'], $_POST);
+		} else {
+			$produtos_list = $produtos->store($_POST);
+		}
+	}
+
+	if (isset($_GET['id'])) {
+		$data = $produtos->edit($_GET['id'])['data'];
+	}
+	$marcas = $produtos->marcas()['data'];
 ?>
 
 <div class="content-wrapper">
@@ -26,18 +45,17 @@
 				<form method="post" action="">
 					<div class="form-group">
 						<label for="nome">Produto:</label>
-						<input type="text" class="form-control" id="nome" placeholder="Nome do produto">
+						<input name="nome" type="text" class="form-control" id="nome" placeholder="Nome do produto" value="<?php echo (isset($data) ? $data[0]['nome'] : false) ?>">
 					</div>
 					<div class="form-group">
 						<label for="marca">Marca:</label>
 						<select class="form-control" name="marca">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
+							<?php foreach ($marcas as $row => $value): ?>
+								<option value="<?php echo $value['id']; ?>" <?php echo ($data[0]['marcas_id'] ==  $value['id'] ? selected : false) ?>><?php echo $value['nome']; ?></option>
+							<?php endforeach; ?>
 						</select>
 					</div>
+					<input type="submit" name="" value="Cadastrar" class="btn btn-sm btn-primary">
 				</form>
 			</div>
 		</div>

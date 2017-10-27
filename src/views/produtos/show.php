@@ -8,7 +8,7 @@
 
 	require('../../controllers/ProdutosController.php');
 	$produtos = new ProdutosController;
-	$produtos_list = $produtos->show()['data'];
+	$produtos_list = $produtos->show();
 
 ?>
 
@@ -42,12 +42,12 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($produtos_list as $row): ?>
+						<?php foreach ($produtos_list['data'] as $row => $value): ?>
 							<tr>
-								<td><?php echo $row->nome; ?></td>
-								<td><?php $row->marca; ?></td>
-								<td><?php $row->quantidade; ?></td>
-								<td><?php 'R$ '.$row->preco; ?></td>
+								<td><?php echo $value['nome']; ?></td>
+								<td><?php echo $value['marca']; ?></td>
+								<td><?php echo $value['qtd']; ?></td>
+								<td><?php echo 'R$ '.$value['preco']; ?></td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>
