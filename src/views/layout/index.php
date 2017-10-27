@@ -1,6 +1,6 @@
 <?php 
-include('src/views/layout/head.php');
-include('src/views/layout/header.php');
+include('head.php');
+include('header.php');
 ?>
 
 
@@ -524,6 +524,6 @@ include('src/views/layout/header.php');
 <!-- /.content -->
 </div>
 <?php 
-include('src/views/layout/footer.php');
-include('src/views/layout/foot.php');
-?>	
+include('footer.php');
+include('foot.php');
+?>  
