@@ -33,7 +33,7 @@ class ProductModel
 		$logic = new LogicDatabase;
 		$update = array('table'=> 'produtos', 'set'=> array('nome="'.$nome.'"', 'valor="'.$valor.'"', 'qtd="'.$qtd.'"', 'marcas_id="'.$marcas_id.'"', 'empresa_id="'.$empresa_id.'"',), 'where'=>'id="'.$id.'"');
 
-		return $logic->updateValues($update);
+		$logic->updateValues($update);
 
 	}
 
