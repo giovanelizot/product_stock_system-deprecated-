@@ -3,7 +3,7 @@
 	$dbname= 'sistema_ce';
 	$host = 'localhost';
 	$usuario = 'root';
-	$senha = 'toor';
+	$senha = '';
 
 	error_reporting(E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
 
@@ -12,3 +12,4 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 //	mysqli_query($id_conexao, "SET NAMES 'utf8'");
+?>

@@ -1,8 +1,10 @@
 <?php
-
-include('connection.php');
-
-function insertValues($datas){
+/**
+* 
+*/
+class LogicDataBase
+{
+	public function insertValues($datas) {
 	$query = "INSERT INTO ";
 
 	foreach ($datas as $key => $value) {
@@ -35,7 +37,7 @@ function insertValues($datas){
 	executeQuery($query);
 }
 
-function selectValues($datas){
+public function selectValues($datas){
 	$query = "SELECT ";
 
 	foreach ($datas as $key => $value) {
@@ -72,11 +74,10 @@ function selectValues($datas){
 		}
 	}
 	$query .= ";";
-	echo $query;
-	executeSelect($query);
+	return $this->executeSelect($query);
 }
 
-function updateValues($datas){
+public function updateValues($datas){
 	$query = "UPDATE ";
 	foreach ($datas as $key => $value) {
 		if($key == "table"){
@@ -103,7 +104,7 @@ function updateValues($datas){
 	executeQuery($query);
 }
 
-function deleteValues($datas){
+public function deleteValues($datas){
 	$query = "DELETE FROM ";
 	foreach ($datas as $key => $value) {
 
@@ -118,6 +119,28 @@ function deleteValues($datas){
 	$query .= ";";
 	echo $query;
 	executeQuery($query);
+}
+
+public function executeQuery($query){
+	include('../../core/connection.php');
+	$data = $conn->query($query);
+	if($data==true)	return true;
+	
+	return false;
+}
+
+public function executeSelect($query){
+	include('../../core/connection.php');
+
+	$data = $conn->query($query);
+	
+	while($row = $data->fetch_assoc()){
+		$finalResult[] = $row;
+	}
+	return $finalResult;
+}
+	
+	
 }
 
 
