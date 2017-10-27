@@ -35,21 +35,21 @@
 </ul>
 </li>
 <li>
-  <a href="pedidos.php">
+  <a href="../pedidos/show.php">
     <i class="fa fa-shopping-bag"></i> <span>Pedidos</span>
     <span class="pull-right-container">    
     </span>
 </a>
 </li>
 <li>
-<a href="fornecedores.php">
+<a href="../fornecedores/show.php">
     <i class="fa fa-truck"></i> <span>Fornecedores</span>
     <span class="pull-right-container">    
     </span>
 </a>
 </li> 
 <li>
-<a href="relatorios.php">
+<a href="../relatorios/show.php">
     <i class="fa fa-line-chart" aria-hidden="true"></i> <span>Relatórios</span>
     <span class="pull-right-container">    
     </span>
