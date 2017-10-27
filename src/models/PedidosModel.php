@@ -5,7 +5,26 @@ class PedidosModel
 	public function getAll()
 	{
 		include('../../core/connection.php');
-		$data =	$conn->query('SELECT * FROM marcas;');
+		$data =	$conn->query('SELECT * FROM pedidos;');
+		while($row = $data->fetch_assoc()){
+			$finalResult[] = $row;
+		}
+		return $finalResult;
+	}
+
+	public function storeRelation($pedido, $produtos_id, $qtd)
+	{
+		include('../../core/connection.php');
+		$data =	$conn->query('INSERT INTO pedidos_has_produtos (pedidos_id, produtos_id, qtd) VALUES ('.$pedido.', '.$produtos_id.', '.$qtd.');');
+		while($row = $data->fetch_assoc()){
+			$finalResult[] = $row;
+		}
+		return $finalResult;
+	}
+
+	public function fornecedores() {
+		include('../../core/connection.php');
+		$data =	$conn->query('SELECT * FROM fornecedores;');
 		while($row = $data->fetch_assoc()){
 			$finalResult[] = $row;
 		}
@@ -15,7 +34,7 @@ class PedidosModel
 	public function edit($id)
 	{
 		include('../../core/connection.php');
-		$data =	$conn->query('SELECT * FROM marcas WHERE id = '.$id.';');
+		$data =	$conn->query('SELECT * FROM pedidos WHERE id = '.$id.';');
 		while($row = $data->fetch_assoc()){
 			$finalResult[] = $row;
 		}
@@ -34,7 +53,7 @@ class PedidosModel
 	public function store($valor_total, $situacao, $descricao, $data, $fornecedores_id)
 	{
 		include('../../core/connection.php');
-		if ($conn->query("INSERT INTO marcas (nome) VALUES ('".$nome."');") === TRUE) {
+		if ($conn->query("INSERT INTO pedidos (valor_total, situacao, descricao, data, fornecedores_id) VALUES (".$valor_total.", ".$situacao.", '".$descricao."', '".$data."', ".$fornecedores_id.");") === TRUE) {
 			return true;
 		}
 		return false;

@@ -1,36 +1,61 @@
 <?php
 include('../../models/PedidosModel.php');
+include('../../models/FornecedoresModel.php');
+include('../../models/ProductModel.php');
+
 class PedidosController
 {
 	public function show()
 	{
-		$marcas_model = new PedidosModel();
-		$data =  $marcas_model->getAll();
-		//var_dump($data); exit;
+		$pedidos_model = new PedidosModel();
+		$data =  $pedidos_model->getAll();
 		return compact('data');
 	}
 
 	public function edit($id)
 	{
-		$marcas_model = new PedidosModel();
-		$data =  $marcas_model->edit($id);
+		$pedidos_model = new PedidosModel();
+		$data =  $pedidos_model->edit($id);
 		return compact('data');
+	}
+
+	public function fornecedores($id='')
+	{
+		$fornecedores_model = new FornecedoresModel();
+		if (!isset($id) and $id == '') {
+			$fornecedores = $fornecedores_model->edit($id);
+		} else {
+			$fornecedores = $fornecedores_model->getAll();
+		}
+		return $fornecedores;
+	}
+
+	public function produtosStore($id)
+	{
+		$pedidos_model = new PedidosModel();
+		$data =  $pedidos_models->toreRelation($id, $post['produto'], $post['quamtidade']);
+		return compact('data');
+	}
+
+	public function produtos()
+	{
+		$produtos_model = new ProductModel();
+		$produtos = $produtos_model->getAllProduct();
+		return $produtos;
 	}
 
 	public function update($id, $post)
 	{
-		$marcas_model = new PedidosModel();
-		$data =  $marcas_model->update($id, $post['nome']);
+		$pedidos_model = new PedidosModel();
+		$data =  $pedidos_model->update($id, $post['nome']);
 
 		return true;
 	}
 
 	public function store($post)
 	{
-		$marcas_model = new PedidosModel();
-		$data =  $marcas_model->store($post['descricao'], $post['valor_total'], $post['descricao'], date('Y-m-d h:m:i'));
-
+		$pedidos_model = new PedidosModel();
+		$data = $pedidos_model->store($post['valor_total'], 1, $post['descricao'], date('Y-m-d h:m:i'), $post['fornecedor']);
 		return true;
 	}
-
 }

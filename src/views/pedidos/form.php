@@ -19,16 +19,18 @@
 	if (isset($_GET['id'])) {
 		$data = $pedidos->edit($_GET['id'])['data'];
 	}
+
+	$fornecedores = $pedidos->fornecedores();
 ?>
 
 <div class="content-wrapper">
 	<section class="content-header">
 		<h1>
-			<i class="fa fa-fw fa-truck"></i> Cadastro de Pedidos
+			<i class="fa fa-fw fa-shopping-bag"></i> Cadastro de Pedidos
 		</h1>
 		<ol class="breadcrumb">
 			<li><a href="/"><i class="fa fa-dashboard"></i> Início</a></li>
-			<li><a href="../produtos/show.php"> Pedidos</a></li>
+			<li><a href="../pedidos/show.php"> Pedidos</a></li>
 			<li class="active">Cadastrar Pedido</li>
 		</ol>
 	</section>
@@ -47,8 +49,16 @@
 						<textarea class="form-control" rows="6" id="descricao" name="descricao"></textarea>
 					</div>
 					<div class="form-group">
+						<label for="marca">Fornecedor:</label>
+						<select class="form-control" name="fornecedor">
+							<?php foreach ($fornecedores as $row => $value): ?>
+								<option value="<?php echo $value['id']; ?>" <?php echo ($data[0]['fornecedores_id'] ==  $value['id'] ? selected : false) ?>><?php echo $value['nome']; ?></option>
+							<?php endforeach; ?>
+						</select>
+					</div>
+					<div class="form-group">
 						<label for="valor_total">Valor Total:</label>
-						<input name="valor_total" type="text" class="form-control" id="valor_total" placeholder="Valor total" value="<?php echo (isset($data) ? $data[0]['nome'] : false) ?>">
+						<input name="valor_total" type="text" class="form-control" id="valor_total" placeholder="Valor total" value="<?php echo (isset($data) ? $data[0]['valor_total'] : false) ?>">
 					</div>
 					<input type="submit" value="Cadastrar" class="btn btn-sm btn-primary">
 				</form>
