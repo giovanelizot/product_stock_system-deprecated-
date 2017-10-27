@@ -16,49 +16,34 @@
   <ul class="sidebar-menu" data-widget="tree">
     <li class="header"> MAIN NAVIGATION </li>
     <li>
-      <a href="unidades.php">
-       <i class="fa fa-university"></i> <span> Administração </span>
+      <a href="">
+       <i class="fa fa-university"></i> <span>Home</span>
        <span class="pull-right-container">    
        </span>
    </a>
 </li>
-<li>
-  <a href="usuarios.php">
-    <i class="fa fa-users"></i> <span> Usuários </span>
-    <span class="pull-right-container">    
-    </span>
-</a>
-</li>
 <li class="treeview">
   <a href="#">
-    <i class="fa fa-cart-plus"></i> <span> Gerenciar Produtos </span>
+    <i class="fa fa-cart-plus"></i> <span>Produtos</span>
     <span class="pull-right-container">
       <i class="fa fa-angle-left pull-right"></i>
   </span>
 </a>
 <ul class="treeview-menu">
-    <li><a href="produtos.php"><i class="fa fa-circle-o"></i> Produtos </a></li>
-    <li><a href="marcas.php"><i class="fa fa-circle-o"></i> Marcas </a></li>
-    <li><a href="empresas.php"><i class="fa fa-circle-o"></i> Empresas </a></li>
+    <li><a href="../produtos/show.php"><i class="fa fa-circle-o"></i> Produtos </a></li>
+    <li><a href="../marcas/show.php"><i class="fa fa-circle-o"></i> Marcas </a></li>
 </ul>
 </li>
 <li>
   <a href="pedidos.php">
-    <i class="fa fa-shopping-bag"></i> <span>Gerenciar Compras</span>
+    <i class="fa fa-shopping-bag"></i> <span>Pedidos</span>
     <span class="pull-right-container">    
     </span>
 </a>
 </li>
 <li>
-  <a href="vendas.php">
-    <i class="fa fa-usd"></i><span>Gerenciar Vendas</span>
-    <span class="pull-right-container">    
-    </span>
-</a>
-</li>  
-<li>
 <a href="fornecedores.php">
-    <i class="fa fa-truck"></i> <span>Gerenciar Fornecedores</span>
+    <i class="fa fa-truck"></i> <span>Fornecedores</span>
     <span class="pull-right-container">    
     </span>
 </a>

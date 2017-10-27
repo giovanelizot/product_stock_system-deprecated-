@@ -34,7 +34,7 @@ class LogicDataBase
 	}
 
 	$query .= ";";
-	executeQuery($query);
+	$this->executeQuery($query);
 }
 
 public function selectValues($datas){
@@ -101,7 +101,7 @@ public function updateValues($datas){
 	}
 	$query .= ";";
 	echo $query;
-	executeQuery($query);
+	$this->executeQuery($query);
 }
 
 public function deleteValues($datas){
@@ -118,7 +118,7 @@ public function deleteValues($datas){
 	}
 	$query .= ";";
 	echo $query;
-	executeQuery($query);
+	$this->executeQuery($query);
 }
 
 public function executeQuery($query){
