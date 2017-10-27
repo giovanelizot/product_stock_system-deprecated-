@@ -15,20 +15,9 @@ class ProductModel
 	}
 
 	public function marcas() {
-<<<<<<< HEAD
-		include('../../core/connection.php');
-		$data =	$conn->query('SELECT id, nome FROM marcas');
-		while($row = $data->fetch_assoc()) {
-			$finalResult[] = $row;
-		}
-
-		return $finalResult;
-=======
-		
 		$logic = new LogicDatabase;
 		$select = array('column'=> array('id', 'nome'), 'table'=> array('marcas'));
 		return $logic->selectValues($select);
->>>>>>> e58429a4c29ad352c956666e427d17ea3cb43374
 	}
 
 	public function edit($id)
