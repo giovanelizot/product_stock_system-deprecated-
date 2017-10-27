@@ -1,9 +1,9 @@
 <?php
 
-include('crud.php');
+include('logicDataBase.php');
 
 $insert = array('table'=>'empresa', 'column'=> array('nome', 'telefone', 'endereco'), 'value' => array('"zzzzz"', '823718231', '"ruaashdua"'));
-$select = array('column'=> array('nome', 'telefone'), 'table'=> array('empresa'), 'where'=> 'nome = "matheus" and telefone > 10', 'orderby'=> 'nome asc');
+$select = array('column'=> array('id', 'nome'), 'table'=> array('marcas'), 'where' => 'id=1');
 $update = array('table'=> 'empresa', 'set'=> array('nome="matheus"', 'telefone=91109930'), 'where'=>'nome="matheus"');
 $delete = array('table'=> 'empresa', 'where'=> 'nome="matheus"');
 

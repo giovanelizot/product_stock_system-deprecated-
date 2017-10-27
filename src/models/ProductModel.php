@@ -1,5 +1,6 @@
 <?php
 
+include('../../db_core/logicDataBase.php');
 class ProductModel
 {
 	public function getAllProduct()
@@ -14,6 +15,7 @@ class ProductModel
 	}
 
 	public function marcas() {
+<<<<<<< HEAD
 		include('../../core/connection.php');
 		$data =	$conn->query('SELECT id, nome FROM marcas');
 		while($row = $data->fetch_assoc()) {
@@ -21,34 +23,36 @@ class ProductModel
 		}
 
 		return $finalResult;
+=======
+		
+		$logic = new LogicDatabase;
+		$select = array('column'=> array('id', 'nome'), 'table'=> array('marcas'));
+		return $logic->selectValues($select);
+>>>>>>> e58429a4c29ad352c956666e427d17ea3cb43374
 	}
 
 	public function edit($id)
 	{
-		include('../../core/connection.php');
-		$data =	$conn->query('SELECT id, nome, marcas_id FROM produtos WHERE id = '.$id.';');
-		while($row = $data->fetch_assoc()){
-			$finalResult[] = $row;
-		}
-		return $finalResult;
+		$logic = new LogicDatabase;
+		$select = array('column'=> array('id', 'nome', 'marcas_id'), 'table'=> array('produtos'), 'where'=>'id='.$id);
+		return $logic->selectValues($select);
 	}
+
 
 	public function updateProduct($id, $nome, $valor, $qtd, $marcas_id, $empresa_id)
 	{
-		include('../../core/connection.php');
-		if ($conn->query("UPDATE produtos SET nome = '".$nome."', valor = ".$valor.", qtd = ".$qtd.", marcas_id = ".$marcas_id.", empresa_id = ".$empresa_id." WHERE id = ".$id.");") === TRUE) {
-			return true;
-		}
-		return false;
+		$logic = new LogicDatabase;
+		$update = array('table'=> 'produtos', 'set'=> array('nome="'.$nome.'"', 'valor="'.$valor.'"', 'qtd="'.$qtd.'"', 'marcas_id="'.$marcas_id.'"', 'empresa_id="'.$empresa_id.'"',), 'where'=>'id="'.$id.'"');
+
+		return $logic->updateValues($update);
+
 	}
 
 	public function storeProduct($nome, $valor, $qtd, $marcas_id, $empresa_id)
 	{
-		include('../../core/connection.php');
-		if ($conn->query("INSERT INTO produtos (nome, valor, qtd, marcas_id, empresa_id) VALUES ('".$nome."', ".$valor.", ".$qtd.", ".$marcas_id.", ".$empresa_id.");") === TRUE) {
-			return true;
-		}
-		return false;
+		$logic = new LogicDatabase;
+		$insert = array('table'=>'produtos', 'column'=> array('nome', 'valor', 'qtd', 'marcas_id', 'empresa_id'), 'value' => array('"'.$nome.'"', '"'.$valor.'"', '"'.$qtd.'"', '"'.$marcas_id.'"', '"'.$empresa_id.'"'));
+		$logic->insertValues($insert);
 	}
 
 }

@@ -27,6 +27,7 @@ class ProdutosController
 	public function update($id, $post)
 	{
 		$product_model = new ProductModel();
+
 		$data =  $product_model->updateProduct($id, $post['nome'], 0, 0, $post['marca'], 1);
 
 		return true;
