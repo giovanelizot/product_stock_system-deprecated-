@@ -9,15 +9,17 @@ class ProductModel
 		while($row = $data->fetch_assoc()){
 			$finalResult[] = $row;
 		}
+
 		return $finalResult;
 	}
 
 	public function marcas() {
 		include('../../core/connection.php');
 		$data =	$conn->query('SELECT id, nome FROM marcas');
-		while($row = $data->fetch_assoc()){
+		while($row = $data->fetch_assoc()) {
 			$finalResult[] = $row;
 		}
+
 		return $finalResult;
 	}
 
