@@ -1,5 +1,5 @@
 <?php
-include('../../models/MarcasModel.php');
+include('src/models/MarcasModel.php');
 class MarcasController
 {
 	public function show()

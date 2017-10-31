@@ -5,7 +5,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../../../assets/lteadmin/dist/img/admin.png" class="img-circle" alt="User Image">
+          <img src="assets/lteadmin/dist/img/admin.png" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
           <p> Administrador </p>
@@ -16,7 +16,7 @@
   <ul class="sidebar-menu" data-widget="tree">
     <li class="header"> MAIN NAVIGATION </li>
     <li>
-      <a href="">
+      <a href="index.php">
        <i class="fa fa-university"></i> <span>Home</span>
        <span class="pull-right-container">    
        </span>
@@ -30,19 +30,19 @@
   </span>
 </a>
 <ul class="treeview-menu">
-    <li><a href="../produtos/show.php"><i class="fa fa-circle-o"></i> Produtos </a></li>
-    <li><a href="../marcas/show.php"><i class="fa fa-circle-o"></i> Marcas </a></li>
+    <li><a href="conteudo.php?m=produtos&a=listar"><i class="fa fa-circle-o"></i> Produtos </a></li>
+    <li><a href="conteudo.php?m=marcas&a=listar"><i class="fa fa-circle-o"></i> Marcas </a></li>
 </ul>
 </li>
 <li>
-  <a href="../pedidos/show.php">
+  <a href="conteudo.php?m=pedidos&a=listar">
     <i class="fa fa-shopping-bag"></i> <span>Pedidos</span>
     <span class="pull-right-container">    
     </span>
 </a>
 </li>
 <li>
-<a href="../fornecedores/show.php">
+<a href="conteudo.php?m=fornecedores&a=listar">
     <i class="fa fa-truck"></i> <span>Fornecedores</span>
     <span class="pull-right-container">    
     </span>

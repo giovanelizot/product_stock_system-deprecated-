@@ -3,10 +3,9 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 
-	include('../layout/head.php');
-	include('../layout/header.php');
+	
 
-	require('../../controllers/ProdutosController.php');
+	require('src/controllers/ProdutosController.php');
 	$produtos = new ProdutosController;
 	if(count($_POST) > 0) {
 		if (isset($_GET['id'])) {
@@ -29,7 +28,7 @@
 		</h1>
 		<ol class="breadcrumb">
 			<li><a href="/"><i class="fa fa-dashboard"></i> Início</a></li>
-			<li><a href="../produtos/show.php"> Produtos</a></li>
+			<li><a href="conteudo.php?m=produtos&a=listar"> Produtos</a></li>
 			<li class="active">Cadastrar Produto</li>
 		</ol>
 	</section>
@@ -38,7 +37,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Produtos</h3>
 				<div class="box-tools pull-right">
-					<a href="../produtos/show.php" class="btn btn-default btn-xs"> <i class="fa fa-fw fa-undo"></i> Voltar</a>
+					<a href="conteudo.php?m=produtos&a=listar" class="btn btn-default btn-xs"> <i class="fa fa-fw fa-undo"></i> Voltar</a>
 				</div>
 			</div>
 			<div class="box-body">
@@ -61,7 +60,4 @@
 		</div>
 	</section>
 </div>
-<?php
-	include('../layout/footer.php');
-	include('../layout/foot.php');
-?>
+

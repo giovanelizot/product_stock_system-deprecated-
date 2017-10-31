@@ -1,5 +1,5 @@
 <?php
-include('../../models/ProductModel.php');
+include('src/models/ProductModel.php');
 class ProdutosController
 {
 	public function show()

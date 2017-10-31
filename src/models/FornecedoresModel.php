@@ -1,5 +1,5 @@
 <?php
-include('../../db_core/logicDataBase.php');
+include('src/db_core/logicDataBase.php');
 class FornecedoresModel
 {
 	public function getAll() {

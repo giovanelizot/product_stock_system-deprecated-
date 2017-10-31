@@ -1,7 +1,7 @@
 <?php
-include('../../models/PedidosModel.php');
-include('../../models/FornecedoresModel.php');
-include('../../models/ProductModel.php');
+include('src/models/PedidosModel.php');
+include('src/models/FornecedoresModel.php');
+include('src/models/ProductModel.php');
 
 class PedidosController
 {

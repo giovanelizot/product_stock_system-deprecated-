@@ -122,7 +122,7 @@ public function deleteValues($datas){
 }
 
 public function executeQuery($query){
-	include('../../core/connection.php');
+	include('src/core/connection.php');
 	$data = $conn->query($query);
 	if($data==true)	return true;
 	
@@ -130,7 +130,7 @@ public function executeQuery($query){
 }
 
 public function executeSelect($query){
-	include('../../core/connection.php');
+	include('src/core/connection.php');
 
 	$data = $conn->query($query);
 	

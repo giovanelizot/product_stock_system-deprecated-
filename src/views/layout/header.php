@@ -18,13 +18,13 @@
           <!-- Conta de Usuario -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../../../assets/lteadmin/dist/img/admin.png" class="user-image" alt="User Image">
+              <img src="assets/lteadmin/dist/img/admin.png" class="user-image" alt="User Image">
               <span class="hidden-xs">Administrador</span>
             </a>
             <ul class="dropdown-menu">
               <!-- Imagem Administrador -->
               <li class="user-header">
-                <img src="../../../assets/lteadmin/dist/img/admin.png" class="img-circle" alt="User Image">
+                <img src="assets/lteadmin/dist/img/admin.png" class="img-circle" alt="User Image">
 
                 <p>
                   Administrador

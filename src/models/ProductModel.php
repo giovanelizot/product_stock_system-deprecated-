@@ -1,11 +1,11 @@
 <?php
 
-include('../../db_core/logicDataBase.php');
+include('src/db_core/logicDataBase.php');
 class ProductModel
 {
 	public function getAllProduct()
 	{
-		include('../../core/connection.php');
+		include('src/core/connection.php');
 		$data =	$conn->query('SELECT p.nome, p.valor, m.nome AS marca, p.qtd FROM produtos AS p, marcas AS m WHERE m.id = p.marcas_id;');
 		while($row = $data->fetch_assoc()){
 			$finalResult[] = $row;

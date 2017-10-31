@@ -3,10 +3,7 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 
-	include('../layout/head.php');
-	include('../layout/header.php');
-
-	require('../../controllers/ProdutosController.php');
+	require('src/controllers/ProdutosController.php');
 	$produtos = new ProdutosController;
 	$produtos_list = $produtos->show();
 
@@ -18,7 +15,7 @@
 			<i class="fa fa-fw fa-cart-plus"></i>Todos os Produtos
 		</h1>
 		<ol class="breadcrumb">
-			<li><a href="../../../index.php"><i class="fa fa-dashboard"></i> Início</a></li>
+			<li><a href="index.php"><i class="fa fa-dashboard"></i> Início</a></li>
 			<li class="active">Todos os Produto</li>
 		</ol>
 	</section>
@@ -28,7 +25,7 @@
 			<h3 class="box-title">Produtos</h3>
 
 			<div class="box-tools pull-right">
-				<a href="../produtos/form.php" class="btn btn-default btn-xs"> <i class="fa fa-fw fa-plus"></i> Novo</a>
+				<a href="conteudo.php?m=produtos&a=cadastrar" class="btn btn-default btn-xs"> <i class="fa fa-fw fa-plus"></i>Novo</a>
 			</div>
 			</div>
 			<div class="box-body">
@@ -56,7 +53,3 @@
 		</div>
 	</section>
 </div>
-<?php
-	include('../layout/footer.php');
-	include('../layout/foot.php');
-?>

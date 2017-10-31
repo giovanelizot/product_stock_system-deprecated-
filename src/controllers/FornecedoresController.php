@@ -1,5 +1,5 @@
 <?php
-include('../../models/FornecedoresModel.php');
+include('src/models/FornecedoresModel.php');
 class FornecedoresController
 {
 	public function show()
