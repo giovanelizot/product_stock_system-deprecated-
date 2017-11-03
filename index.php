@@ -21,8 +21,7 @@ include('src/views/layout/header.php');
 		</h2>
 		<div class="panel page-header callout callout-info lead text-center">
 			<h1>ESTOQUE
-
-				<div class="container" align="left" style="position:absolute;">
+				<div class="container" align="left"  style="height: 0.9em; width: 0.9em; float: left " style="position:absolute;">
 					<i class="fa fa-shopping-bag fa-2x"></i>
 				</div></h1>
 				<!-- BEGIN SECTION BANNER -->
