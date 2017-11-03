@@ -12,14 +12,22 @@ class PedidosModel
 		return $finalResult;
 	}
 
-	public function storeRelation($pedido, $produtos_id, $qtd)
+	public function addprod($pedido, $produtos_id, $qtd)
 	{
 		include('src/core/connection.php');
-		$data =	$conn->query('INSERT INTO pedidos_has_produtos (pedidos_id, produtos_id, qtd) VALUES ('.$pedido.', '.$produtos_id.', '.$qtd.');');
-		while($row = $data->fetch_assoc()){
-			$finalResult[] = $row;
+		if ($conn->query('INSERT INTO pedidos_has_produtos (pedidos_id, produtos_id, qtd) VALUES ('.$pedido.', '.$produtos_id.', '.$qtd.');')) {
+			return true;
 		}
-		return $finalResult;
+		return false;
+	}
+
+	public function alteraSituacao($id, $situacao) {
+		include('src/core/connection.php');
+		if ($conn->query('UPDATE pedidos SET situacao = '.$situacao.' WHERE id = '.$id)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public function fornecedores() {

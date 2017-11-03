@@ -39,7 +39,16 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	$('#table').DataTable();
-} );
+
+    $(".open-modal").click(function () {
+        $('#pedido').val($(this).data('id'));
+        $('#myModal').modal('show');
+    });
+    $(".open-modal-situacao").click(function () {
+        $('#pedido-situacao').val($(this).data('id'));
+        $('#myModal2').modal('show');
+    });
+});
 </script>
 </body>
 </html>

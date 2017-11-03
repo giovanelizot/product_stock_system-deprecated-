@@ -30,11 +30,19 @@ class PedidosController
 		return $fornecedores;
 	}
 
-	public function produtosStore($id)
+
+	public function adicionaProdutos($post)
 	{
 		$pedidos_model = new PedidosModel();
-		$data =  $pedidos_models->toreRelation($id, $post['produto'], $post['quamtidade']);
-		return compact('data');
+		$pedidos_model->addprod($post['pedido'], $post['prod'], $post['quantidade']);
+		return true;
+	}
+
+	public function alteraSituacao($id, $situacao)
+	{
+		$pedidos_model = new PedidosModel();
+		$pedidos_model->alteraSituacao($id, $situacao);
+		return true;
 	}
 
 	public function produtos()

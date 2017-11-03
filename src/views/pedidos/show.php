@@ -3,14 +3,23 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 
-	include('../layout/head.php');
-	include('../layout/header.php');
 
-	require('../../controllers/PedidosController.php');
+
+	require('src/controllers/PedidosController.php');
+	require('src/Helpers/functions.php');
 	$pedidos = new PedidosController;
 	$pedidos_list = $pedidos->show();
 	$produtos = $pedidos->produtos();
 
+	if (count($_POST) > 0) {
+		if ($_POST['situacao']) {
+			$situacao = new Functions;
+			$pedidos->alteraSituacao($_POST['pedido'], $_POST['situacao']);
+			$pedidos_list = $pedidos->show();
+		} else {
+			$pedidos->adicionaProdutos($_POST);
+		}
+	}
 ?>
 
 <div class="content-wrapper">
@@ -29,7 +38,7 @@
 			<h3 class="box-title">Pedidos</h3>
 
 			<div class="box-tools pull-right">
-				<a href="../pedidos/form.php" class="btn btn-default btn-xs"> <i class="fa fa-fw fa-plus"></i> Novo</a>
+				<a href="http://localhost/project/conteudo.php?m=pedidos&a=cadastrar" class="btn btn-default btn-xs"> <i class="fa fa-fw fa-plus"></i> Novo</a>
 			</div>
 			</div>
 			<div class="box-body">
@@ -41,9 +50,8 @@
 							<th>Data</th>
 							<th>Valor Total</th>
 							<th>Situação</th>
-							<?php if ($value['situacao'] != 4): ?>
-								<th>Produtos</th>
-							<?php endif; ?>
+							<th>Produtos</th>
+							<th>Pedido</th>
 							<th>Ações</th>
 						</tr>
 					</thead>
@@ -63,18 +71,60 @@
 									<?php echo $value['valor_total']; ?>
 								</td>
 								<td>
-									<?php echo $value['situacao']; ?>
+									<span class="label label-warning">
+										<?php
+											switch ($value['situacao']) {
+												case 1:
+
+													echo "<i class=\"fa fa-fw fa-clock-o\"></i> Pendente";
+													break;
+												case 2:
+													echo "<i class=\"fa fa-fw fa-check-circle-o\"></i> Aprovado";
+													break;
+												case 3:
+													echo "<i class=\"fa fa-fw fa-truck\"></i> À Caminho";
+												break;
+												case 4:
+													echo "<i class=\"fa fa-fw fa-list\"></i> Em Revisão";
+													break;
+												case 5:
+													echo "<i class=\"fa fa-fw fa-truck\"></i> Retornado ao Fornecedor";
+													break;
+												case 6:
+													echo "<i class=\"fa fa-fw fa-check\"></i> Finalizada";
+													break;
+												default:
+													echo "Situação Desconhecida";
+													break;
+											}
+										 ?>
+								 	</span>
+									<br>
+									<br>
+									<button type="button" class="btn btn-primary btn-xs open-modal-situacao" data-toggle="modal" data-id="<?php echo $value['id']; ?>">
+										<span class="fa fa-edit fa-fw"></span>	Alterar
+									</button>
 								</td>
-								<?php if ($value['situacao'] != 4): ?>
-									<td>
-										<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
-											<i class="fa fa-fw fa-pencil"></i>Adicionar Produtos
-										</button>
-									</td>
-								<?php endif; ?>
 								<td>
-									<a href="./form.php?id=<?php echo $value['id']; ?>" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-pencil"></i> Editar</a>
-									<a href="./form.php?id=<?php echo $value['id']; ?>" class="btn btn-danger btn-xs"><i class="fa fa-fw fa-trash"></i> Excluir</a>
+									<button type="button" class="btn btn-primary btn-xs open-modal" data-toggle="modal" data-id="<?php echo $value['id']; ?>">
+										<i class="fa fa-fw fa-pencil"></i>Adicionar Produtos
+									</button>
+								</td>
+								<td>
+									<?php $prod = new Functions; ?>
+									<?php if ($prod->CheckProduct($value['id'])): ?>
+										<ul>
+											<?php foreach ($prod->CheckProduct($value['id']) as $row2 => $value2): ?>
+												<li><?php echo $value2['nome'].' => '.$value2['qtd'] ?></li>
+											<?php endforeach; ?>
+										</ul>
+									<?php else: ?>
+										Sem produtos cadastrados
+									<?php endif; ?>
+								</td>
+								<td>
+									<a href="conteudo.php?m=pedidos&a=editar&id=<?php echo $value['id']; ?>" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-pencil"></i> Editar</a>
+									<a href="conteudo.php?m=pedidos&a=editar&id=<?php echo $value['id']; ?>" class="btn btn-danger btn-xs"><i class="fa fa-fw fa-trash"></i> Excluir</a>
 								</td>
 							</tr>
 						<?php endforeach; ?>
@@ -90,13 +140,13 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				<h4 class="modal-title" id="myModalLabel">Adicionar produto ao Pedido</h4></h4></h4>
 			</div>
-			<form class="" action="index.html" method="post">
+			<form class="" action="" method="post" >
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="marca">Produtos:</label>
-						<select class="form-control" name="produto">
+						<label for="prod">Produtos:</label>
+						<select class="form-control" name="prod" id="prod">
 							<?php foreach ($produtos as $row => $value): ?>
 								<option value="<?php echo $value['id']; ?>" ><?php echo $value['nome']; ?></option>
 							<?php endforeach; ?>
@@ -106,16 +156,44 @@
 						<label for="quantidade">Quatidade:</label>
 						<input name="quantidade" type="text" class="form-control" id="quantidade" placeholder="Quantidade">
 					</div>
+					 <input type="hidden" name="pedido" id="pedido" value=""/>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn btn-primary">Cadastrar</button>
+					<button type="submit" class="btn btn-primary">Cadastrar</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
-<?php
-	include('../layout/footer.php');
-	include('../layout/foot.php');
-?>
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Alteração de Situação</h4>
+			</div>
+			<form class="" action="" method="post" name="situacao-form">
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="situacao">Situação:</label>
+						<select class="form-control" name="situacao" id="situacao">
+								<option value="1" ><i class="fa fa-fw fa-clock-o"></i> Pendente</option>
+								<option value="2" ><i class="fa fa-fw fa-check-circle-o"></i> Aprovado</option>
+								<option value="3" ><i class="fa fa-fw fa-truck"></i> À caminho</option>
+								<option value="4" ><i class="fa fa-fw fa-list"></i> Em Revisão</option>
+								<option value="5" ><i class="fa fa-fw fa-truck"></i> Retornado ao Fornecedor</option>
+								<option value="6" ><i class="fa fa-fw fa-check"></i> Finalizada</option>
+						</select>
+					</div>
+					<input type="hidden" name="pedido" id="pedido-situacao" value=""/>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<button type="submit" class="btn btn-primary">Alterar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

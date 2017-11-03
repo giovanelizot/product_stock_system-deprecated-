@@ -43,7 +43,7 @@
 				<form method="post" action="">
 					<div class="form-group">
 						<label for="nome">Descrição:</label>
-						<textarea class="form-control" rows="6" id="descricao" name="descricao"></textarea>
+						<textarea class="form-control" rows="6" id="descricao" name="descricao"><?php echo (isset($data[0]['descricao']) ? $data[0]['descricao'] : '') ?></textarea>
 					</div>
 					<div class="form-group">
 						<label for="marca">Fornecedor:</label>

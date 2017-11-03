@@ -1,4 +1,4 @@
-<?php 
+<?php
 include('src/views/layout/head.php');
 include('src/views/layout/header.php');
 
@@ -28,7 +28,7 @@ if(isset($_GET['m']))
 					break;
 				}
 			}
-			break;	
+			break;
 		case 'produtos':
 			if(isset($_GET['a']))
 				{
@@ -68,6 +68,30 @@ if(isset($_GET['m']))
 							break;
 						case 'excluir':
 							include('src/views/marcas/form.php');
+							break;
+
+
+						default:
+								# code...
+						break;
+					}
+				}
+				break;
+				case 'pedidos':	
+			if(isset($_GET['a']))
+				{
+					switch ($_GET['a']) {
+						case 'cadastrar':
+							include('src/views/pedidos/form.php');
+							break;
+						case 'listar':
+							include('src/views/pedidos/show.php');
+							break;
+						case 'editar':
+							include('src/views/pedidos/form.php');
+							break;
+						case 'excluir':
+							include('src/views/pedidos/form.php');
 							break;
 
 
